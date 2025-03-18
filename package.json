@@ -1,0 +1,19 @@
+{
+  "name": "walletmonitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "whale-btc-bot.js", 
+  "scripts": {
+    "start": "node whale-btc-bot.js"  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.2",
+    "dotenv": "^16.4.7",
+    "telegraf": "^4.16.3",
+    "ws": "^8.18.1"
+  }
+}
