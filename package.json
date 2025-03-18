@@ -1,10 +1,9 @@
 {
   "name": "walletmonitor",
   "version": "1.0.0",
-  "description": "",
-  "main": "whale-btc-bot.js", 
+  "type": "module",
   "scripts": {
-    "start": "node whale-btc-bot.js"  
+    "start": "node whale-btc-bot.js"
   },
   "keywords": [],
   "author": "",

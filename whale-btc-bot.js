@@ -10,7 +10,7 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 // Store BTC price history for tracking
 let priceHistory = [];
 
-const WHALE_WALLETS = [
+const WHALE_WALLETS = new Set([
     "bc1qazcm763858nkj2dj986etajv6wquslv8uxwczt",
     "34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo",
     "bc1qgdjqv0av3q56jvd82tkdjpy7gdp9ut8tlqmgrpmv24sq90ecnvqqjwvw97",
@@ -311,7 +311,7 @@ const WHALE_WALLETS = [
     "17spLhCpZVdQXFz2ZL1aP5gRci6RFVNhrD",
     "3J8HWyAAsa5g8uTod4CNDHCBEs7hesVtQF",
     "1Miy5sJZSamDZN6xcJJidp9zYxhSrpDeJm",
-  ]
+]);
 
 // 📡 **Fetch Current BTC Price from Reliable APIs**
 async function getCurrentBitcoinPrice() {
@@ -448,7 +448,7 @@ function predictTrend(priceChange) {
 }
 
 // ⏳ **Schedule Market Reports Every 2 Hours**
-setInterval(postBitcoinAnalysis, 7200000);
+setInterval(postBitcoinAnalysis, 3600000);
 
 // 🚀 **Launch the Telegram Bot**
 bot.launch();
